@@ -13,7 +13,7 @@ public class Practice0701Controller {
 	@Autowired
 	FruitsShopItemRepository repository;
 	
-	//全件検索結果表示
+	//一覧表示
 	@RequestMapping("/fruits_shop")
 	public String showAll(Model model) {
 //		fruits_shop_itemsテーブルの全レコードを取得し、リクエストスコープに保存

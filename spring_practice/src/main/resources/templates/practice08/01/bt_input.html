@@ -11,7 +11,7 @@
 <hr>
 <p>
 <h4>下記の項目を入力し送信ボタンをクリックしてください。</h4>
-<form th:action="@{'TODO'}" method="'TODO'" th:object="${'TODO'}">
+<form th:action="@{/body_temp/check}" method="post" th:object="${'TODO'}">
 <table>
 <tr><td>日付</td><td><input type="text" th:field="*{'TODO'}" /></td><td>形式:yyyy/MM/dd</td></tr>
 <tr><td colspan=2 th:errors="*{'TODO'}" style="color:red"></td></tr>

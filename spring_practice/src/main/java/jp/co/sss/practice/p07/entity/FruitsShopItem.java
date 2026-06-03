@@ -7,11 +7,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "fruits_shop_items")
+@NamedQuery(name = "findNamedQueryByPriceRangeAndType",
+query = "SELECT f FROM FruitsShopItem f WHERE f.price BETWEEN :min AND :max AND f.type=:type ORDER \n" 
+		+ "BY f.price,f.itemId")
 public class FruitsShopItem {
 	
 	@Id
